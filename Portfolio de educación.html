@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio de educación</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F6F2; --grid:rgba(31,42,92,.08); --text:#23283A; --head:#1F2A5C;
+  --mark:#FFE45C; --marktext:#23283A; --red:#D6453D; --rule:rgba(31,42,92,.25);
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141824; --grid:rgba(160,175,255,.08); --text:#E4E7F2; --head:#BFC9FF;
+    --mark:#7A6A10; --marktext:#FFF6C2; --red:#F0716A; --rule:rgba(191,201,255,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141824; --grid:rgba(160,175,255,.08); --text:#E4E7F2; --head:#BFC9FF;
+  --mark:#7A6A10; --marktext:#FFF6C2; --red:#F0716A; --rule:rgba(191,201,255,.3);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background-color:var(--paper); color:var(--text);
+  font:400 1.0625rem/1.65 var(--sans);
+  background-image:
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.wrap{max-width:46rem; margin:0 auto; padding:2.5rem 1.25rem 4rem 1.75rem; position:relative; border-left:2px solid var(--red)}
+@media (min-width:760px){ .wrap{padding-left:3rem; margin-left:max(2rem,calc((100vw - 46rem)/2)); } }
+h1,h2,h3{font-family:var(--serif); color:var(--head); font-weight:400; line-height:1.15; margin:0}
+h1{font-size:clamp(2.6rem,9vw,4.4rem); letter-spacing:-.01em}
+h2{font-size:1.75rem; margin-bottom:1.25rem}
+h3{font-size:1.2rem}
+section{padding-top:3.5rem}
+p{margin:0 0 1rem; max-width:62ch}
+a{color:var(--head); text-underline-offset:.2em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red); outline-offset:3px}
+nav{display:flex; flex-wrap:wrap; gap:1.25rem; font-weight:500; font-size:.95rem}
+
+.sheet{margin:3rem 0 0}
+.field{display:flex; gap:.75rem; align-items:baseline; margin:0 0 .5rem; max-width:30rem}
+.field dt{font-weight:600; white-space:nowrap}
+.field dd{margin:0; flex:1; border-bottom:1.5px solid var(--rule); padding-bottom:.1rem}
+.lead{font-size:1.3rem; line-height:1.5; margin:2rem 0 0; max-width:34ch}
+mark{background:var(--mark); color:var(--marktext); padding:.05em .25em; border-radius:2px}
+
+.list{list-style:none; margin:0; padding:0}
+.list li{padding:1.1rem 0; border-top:1.5px solid var(--rule)}
+.list li:last-child{border-bottom:1.5px solid var(--rule)}
+.row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:.25rem 1rem; align-items:baseline}
+.meta{font-size:.95rem; opacity:.8}
+.list p{margin:.35rem 0 0}
+
+.timeline li{display:grid; grid-template-columns:7.5rem 1fr; gap:1rem}
+.timeline .year{font-weight:600; color:var(--head)}
+@media (max-width:520px){ .timeline li{grid-template-columns:1fr; gap:.1rem} }
+
+.btn{display:inline-block; margin-top:.5rem; padding:.75rem 1.4rem; background:var(--head); color:var(--paper);
+  font-weight:600; text-decoration:none; border-radius:4px}
+footer{margin-top:4rem; font-size:.9rem; opacity:.75}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Secciones">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <header class="sheet">
+    <h1>Tu nombre y apellidos</h1>
+    <dl style="margin:2rem 0 0">
+      <div class="field"><dt>Materia</dt><dd>Lengua y literatura</dd></div>
+      <div class="field"><dt>Etapa</dt><dd>Secundaria y bachillerato</dd></div>
+      <div class="field"><dt>Ciudad</dt><dd>Madrid</dd></div>
+    </dl>
+    <p class="lead">Enseño a leer con ganas y a escribir con criterio. Mis clases parten de lo que el alumnado ya sabe y <mark>avanzan hasta donde nadie esperaba</mark>.</p>
+  </header>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy docente con más de diez años de experiencia en el aula. Diseño unidades didácticas basadas en proyectos, trabajo con evaluación formativa y acompaño a cada grupo para que aprenda a su ritmo.</p>
+    <p>Fuera de clase formo a otros profesores en recursos digitales y colaboro en proyectos de innovación educativa.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <ul class="list">
+      <li>
+        <div class="row"><h3>Club de lectura entre institutos</h3><span class="meta">Secundaria</span></div>
+        <p>Cuatro centros leen el mismo libro y debaten en videollamada. Resultado: más lectura voluntaria y un blog de reseñas del alumnado.</p>
+      </li>
+      <li>
+        <div class="row"><h3>Aula del revés en gramática</h3><span class="meta">Primer ciclo de ESO</span></div>
+        <p>Los alumnos estudian en casa con vídeos cortos y practican en clase con ejercicios por niveles.</p>
+      </li>
+      <li>
+        <div class="row"><h3>Taller de escritura creativa</h3><span class="meta">Bachillerato</span></div>
+        <p>Un trimestre de microrrelatos que termina en una antología impresa por el propio grupo.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="trayectoria">
+    <h2>Trayectoria</h2>
+    <ul class="list timeline">
+      <li><span class="year">2021 hasta hoy</span><div><h3>Profesora de Lengua, IES Ejemplo</h3><p>Tutoría de 3.º de ESO y coordinación del plan de lectura.</p></div></li>
+      <li><span class="year">2016 a 2021</span><div><h3>Profesora de secundaria, Colegio Ejemplo</h3><p>Impartí Lengua y Latín en la ESO.</p></div></li>
+      <li><span class="year">2015</span><div><h3>Máster en Formación del Profesorado</h3><p>Universidad Ejemplo, con prácticas en aula.</p></div></li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres colaborar, invitarme a una formación o hacerme una pregunta?</p>
+    <a class="btn" href="mailto:hola@tudominio.es">Escríbeme</a>
+  </section>
+
+  <footer>Tu nombre, docente. Todos los derechos reservados.</footer>
+</div>
+</body>
+</html>
